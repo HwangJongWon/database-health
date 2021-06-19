@@ -1,0 +1,19 @@
+{% extends './base.html' %} 
+{% load static %}
+
+{% block date-block %} 
+  <div>{{date}} </div>
+{% endblock date-block %} 
+
+{% block food-container %} 
+  {% for fit in fitnessen%}
+    <div class="food">
+      <img src={% get_static_prefix %}{{fit.img_path}} width="300px" height="200px"/>
+      <div class="info">
+        <h3>{{fit.name}}</h3>
+        <P>{{fit.description}}</p>
+        <a href="{{fit.id}}">헬스 둘러보기</a>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock food-container %} 

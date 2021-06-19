@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>휘트니스센터</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href={% static 'foods/css/styles.css'%}>
+</head>
+<body>
+  <div> 
+    {% block date-block %} 
+    {% endblock date-block %}     
+  </div>
+  <hr/>
+
+  <h1>휘트니스센터</h1>
+  <h2>환영합니다!</h2>
+  
+  <div class="food-container">
+    {% block food-container%} 
+    {% endblock food-container%} 
+  </div>
+
+</body>
+</html>

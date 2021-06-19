@@ -1,0 +1,19 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>휘트니스센터</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href={% static 'foods/css/styles_detail.css'%}>
+    </head>
+    <body>
+        <div class="fit-detail">
+            <h2>{{fit.name}}</h2>
+            <p>{{fit.description}}</p>
+            <img src={% get_static_prefix %}{{fit.img_path}}/>
+            <a href="/foods/fit/">돌아가기</a>"  
+        </div>
+    </body>
+</html>
